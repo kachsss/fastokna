@@ -1,0 +1,26 @@
+<% provide(:title, 'Главная') %>
+<% provide(:rew, 'Дом111') %>
+<!-- <h1> RSnet <%=yield(:rew)%></h1> -->
+<div class="center hero-unit rent">
+	<h1>
+		<div class="left">
+		Качественные окна в Вашу новую квартиру.
+		</dev>
+	</h1>
+  
+ 	<h5>Выберите услугу</h5>
+  
+  	<br>
+	<div class="pic center ">
+	<%= link_to image_tag("zamer_mini.jpg", class: "bike_icon pull-left", alt: "Вызов замерщика"), '#' %>
+	<%= link_to image_tag("girl-on-the-bike2.png", class: "bike_icon pull-right", alt: "Расчет стоимости"), '#' %>
+	
+	<%= link_to image_tag("boyandgirl1.png", class: "bike_icon pull-left", alt: "Ремонт окна"), '#' %>
+	<%= link_to image_tag("Tandem2.png", class: "bike_icon pull-right", alt: "Обратная связь"), '#' %>
+	
+	
+
+	</div>
+  
+  
+</div>

@@ -54,6 +54,57 @@ textarea {
   resize: vertical;
 }
 
+/* Slider */
+
+#my_car.carousel{
+	
+}
+
+.carousel-control {
+  &.left, &.right {
+    background-image: none;
+    @include reset-filter();
+  }
+}
+
+.otstup{
+    margin-top:0px;
+}
+
+.carousel-caption{
+	width:870px;
+	background-color: rgba(2, 2, 2, 0.3);
+	h3{
+		text-align:center;
+		color:#000000;
+	}
+}
+
+/* Fade Slider CSS */
+.carousel .item {
+  -webkit-transition: 0.7s ease-in-out opacity;
+  -moz-transition: 0.7s ease-in-out opacity;
+  -o-transition: 0.7s ease-in-out opacity;
+  transition: 0.7s ease-in-out opacity;
+  left: 0 !important;
+}
+.carousel .next.left,
+.carousel .prev.right {
+  opacity: 1;
+  z-index: 1;
+}
+.carousel .active.left,
+.carousel .active.right {
+  opacity: 0;
+  z-index: 2;
+}     
+.carousel .carousel-control {
+  z-index: 1000;
+  outline:none;
+}
+
+/*--------------------------------*/
+
 .center {
   text-align: center;
   h1{

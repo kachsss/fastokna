@@ -1,50 +1,59 @@
 <% provide(:title, 'Главная') %>
 <% provide(:rew, 'Дом111') %>
 
-<div id="my_car" class="carousel slide" data-ride="carousel">
+<div class="row otstup">
+ 
+  <div id="my_car" class="carousel slide" data-ride="carousel">
 	<!-- Маркеры слайдов -->
     <ol class="carousel-indicators">
-		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		<li data-target="#my_car" data-slide-to="0" class="active"></li>
+        <li data-target="#my_car" data-slide-to="1"></li>
+        <li data-target="#my_car" data-slide-to="2"></li>
     </ol>
  
 	<!-- Содержимое слайдов -->
 	<div class="carousel-inner">
 		<div class="item active">
-			<%= image_tag("slider/1.jpg", class: "bike_icon pull-left", alt: "Вызов замерщика") %>
+			<%= image_tag("slider/1.jpg", class: "slider_img", alt: "Вызов замерщика") %>
 			<div class="carousel-caption">
-				<h3>Россия (Москва)</h3>
-				<p>Где это видано, чтобы люди в Москве без прописки проживали.</p>
+				<h3>Подумай об окнах сейчас,  после того, как Вы сделаете ремонт,<br> 
+				сменить окна будет гораздо менее удобно и комфортно для Вас.</h3>
+				
 			</div>
 		</div>
                      
 		<div class="item">
-			<%= image_tag("slider/2.jpg", class: "bike_icon pull-left", alt: "Вызов замерщика") %>
+			<%= image_tag("slider/2.jpg", class: "slider_img", alt: "Вызов замерщика") %>
 			
 			<div class="carousel-caption">
-				<h3>Осень</h3>
-				<p>Осень — это вторая весна, когда каждый лист — цветок.</p>
+				<h3>Свист ветра за окном, долгое ожидание замены окон, <br>
+				пыль на подоконниках, заклинившая форточка - это не для Вас,<br>
+				поменяй окна, замени фурнитуру и живи комфортно.</h3>
+				
 			</div>
 		</div>
                      
 		<div class="item">
-			<%= image_tag("slider/3.jpg", class: "bike_icon pull-left", alt: "Вызов замерщика") %>
+			<%= image_tag("slider/3.jpg", class: "slider_img", alt: "Вызов замерщика") %>
 			
 			<div class="carousel-caption">
-				<h3>Дождь</h3>
-				<p>Осень опять идут дожди...</p>
+				<h3>Цены на электроэнергию не снижаются, отопление включают поздно,  <br>
+				а выключают рано., хватит обогревать улицу,  <br>
+				поставь энергосберегающие окна, экономьте на тепле.</h3>
+				
 			</div>
 		</div>
 	</div>
  
 	<!-- Controls -->
-	<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
+	<a class="carousel-control left" href="#my_car" data-slide="prev">
+			
 	</a>
 	
-	<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-left"></span>
+	<a class="carousel-control right" href="#my_car" data-slide="next">
+		
 	</a>
+  </div>
+
 </div>
  

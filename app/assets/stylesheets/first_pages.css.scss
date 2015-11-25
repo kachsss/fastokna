@@ -6,6 +6,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
+@import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic);
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -18,7 +20,7 @@
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #7F7777;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -35,7 +37,13 @@ html {
 }
 
 body {
+	
+	font-family: 'Roboto', sans-serif;
+		
   padding-top: 60px;
+  background-image: image-url("clouds.jpg");
+  background-position:50% 50%;
+  background-repeat:no-repeat;
 }
 
 section {
@@ -59,6 +67,12 @@ textarea {
   text-align:left;
   }
 }
+.left_fs{
+	background-color: rgba(211, 211, 201, 0.1);
+	border:4px double black;
+	border-color:#333333;
+	padding:10px;
+}
 
 .pic {
 width: 400px;
@@ -74,7 +88,8 @@ padding: 20px
 
 .rent{
 	background-repeat:no-repeat;
-	background-image: image-url("kamenka_001.jpg");
+	background-color: rgba(211, 211, 201, 0.5);
+	/*background-image: image-url("kamenka_001.jpg");
 	/*background-image: url(/assets/bikemap_960.gif);*/
 	height: 525px;
 	padding:20px;
@@ -105,6 +120,12 @@ footer {
       margin-left: 10px;
     }
   }
+}
+
+/* container */
+
+.container{
+	
 }
 
 /* miscellaneous */

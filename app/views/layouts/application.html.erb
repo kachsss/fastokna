@@ -7,35 +7,26 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
-<body>
-	<header class="navbar navbar-fixed-top ">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "Установка окон и замена оконной фурнитуры", root_path, id: "logo" %>
-			
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Домой",    root_path %></li>
-              <li><%= link_to "Наши услуги",   help_path %></li>
-              <%# <li><%= link_to "Вход в личный кабинет", '#' </li> %>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+<body cz-shortcut-listen="true">
 
-	<div class="container">
-      <%= yield %>
+    <%= yield %>
     </div>
 	<%= render 'layouts/footer' %>
 	<%= debug(params) if Rails.env.development? %>
 	
-<script type="text/javascript">
+
+	<script src="jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="bootstrap.min.js"></script>	
+	
+<!-- <script type="text/javascript">
 	var $ = jQuery.noConflict();
 		$(document).ready(function() { 
 			$('#my_car').carousel({ interval: 3000, cycle: false });
+			
 		}); 
-</script>
+</script> -->
+
 
 </body>
 </html>

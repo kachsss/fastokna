@@ -4,9 +4,11 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap";
+/*@import "bootstrap-sprockets";
+@import "config"; // Overwrite bootstrap variables here!*/
 
-@import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic);
+ @import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic);
+
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -16,7 +18,16 @@
 
 /* header */
 
-#logo {
+.navbar-wrapper{
+	padding-top: 20px;
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -40,8 +51,8 @@ body {
 	
 	font-family: 'Roboto', sans-serif;
 		
-  padding-top: 60px;
-  background-image: image-url("clouds.jpg");
+  /*padding-top: 60px;
+  background-image: image-url("clouds.jpg");*/
   background-position:50% 50%;
   background-repeat:no-repeat;
 }
@@ -57,13 +68,16 @@ textarea {
 /* Slider */
 
 #my_car.carousel{
+	width:900px;
+	margin-right: auto;
+    margin-left: auto;
 	
 }
 
 .carousel-control {
   &.left, &.right {
     background-image: none;
-    @include reset-filter();
+    /*@include reset-filter();*/
   }
 }
 
@@ -71,13 +85,60 @@ textarea {
     margin-top:0px;
 }
 
+.carousel-indicators{
+	/*top:480px;
+	right:500px;*/
+	
+}
+
+.carousel-control{
+	top: 50%;
+}
+
+.carousel-control.right{
+	right:15px;
+}
+
+.chevron {
+    width:30%;
+    position:absolute;
+    top:40%;
+}
+
+
+
+.chevron-left {
+    left:35%;
+	top:10px;
+}
+.chevron-right {
+    right:35%;
+	top:10px;
+}
+
 .carousel-caption{
-	width:870px;
+	width: 100%;
+	left: inherit;
 	background-color: rgba(2, 2, 2, 0.3);
 	h3{
 		text-align:center;
-		color:#000000;
+		color:#C5C5C5;
 	}
+}
+.carousel{
+	height: 500px;
+    margin-bottom: 60px;
+}
+.carousel-inner {
+	.item{
+		img{
+			position: absolute;
+   			top: 0;
+    		left: 0;
+   			min-width: 102%;
+    		height: 500px;
+			}
+		}
 }
 
 /* Fade Slider CSS */
@@ -101,6 +162,7 @@ textarea {
 .carousel .carousel-control {
   z-index: 1000;
   outline:none;
+  top:-40px;
 }
 
 /*--------------------------------*/
@@ -149,11 +211,14 @@ padding: 20px
 
 /* footer */
 
+
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #232A30;
   color: #999;
+  height: 30px;
   a {
     color: #555;
     &:hover {
